@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>XcityOrganization</class>
+ <widget class="QWidget" name="XcityOrganization">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QCheckBox" name="XcityJpSkip">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Skip existing records</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="XcityJpComId">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Company pattern</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="XcityJpComMark">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Company spot</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>XcityJpComId</sender>
+   <signal>editingFinished()</signal>
+   <receiver>XcityOrganization</receiver>
+   <slot>XcityJpChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XcityJpSkip</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>XcityOrganization</receiver>
+   <slot>XcityValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XcityJpComMark</sender>
+   <signal>editingFinished()</signal>
+   <receiver>XcityOrganization</receiver>
+   <slot>XcityJpChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

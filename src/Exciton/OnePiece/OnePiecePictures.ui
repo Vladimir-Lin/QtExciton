@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OnePiecePictures</class>
+ <widget class="QWidget" name="OnePiecePictures">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>One Piece Pictures</string>
+  </property>
+  <property name="toolTip">
+   <string>One Piece Pictures</string>
+  </property>
+  <widget class="QCheckBox" name="OpSkip">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>160</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Skip existing records</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="OpRoot">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>One Piece Http Root</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="OpStart">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>160</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>Issue : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
+   <property name="value">
+    <number>337</number>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="isVolume">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>160</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Seek Volumes</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="VolStart">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>160</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>Volume : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>35</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="VolEnd">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>180</y>
+     <width>160</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>Volume : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>35</number>
+   </property>
+   <property name="value">
+    <number>35</number>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="OpCache">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>20</y>
+     <width>160</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Use cache</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>OpSkip</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>OnePiecePictures</receiver>
+   <slot>stateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OpStart</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OnePiecePictures</receiver>
+   <slot>stateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>isVolume</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>OnePiecePictures</receiver>
+   <slot>stateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>VolStart</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OnePiecePictures</receiver>
+   <slot>stateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>VolEnd</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>OnePiecePictures</receiver>
+   <slot>stateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OpRoot</sender>
+   <signal>editingFinished()</signal>
+   <receiver>OnePiecePictures</receiver>
+   <slot>OpChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

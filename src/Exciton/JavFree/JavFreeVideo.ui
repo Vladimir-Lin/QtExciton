@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>JavFreeVideo</class>
+ <widget class="QWidget" name="JavFreeVideo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Free JAV Share</string>
+  </property>
+  <property name="toolTip">
+   <string>Free JAV Share</string>
+  </property>
+  <property name="statusTip">
+   <string>Free JAV Share</string>
+  </property>
+  <property name="whatsThis">
+   <string>Free JAV Share</string>
+  </property>
+  <widget class="QCheckBox" name="Skip">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Skip existing records</string>
+   </property>
+   <property name="statusTip">
+    <string>Skip existing records</string>
+   </property>
+   <property name="whatsThis">
+    <string>Skip existing records</string>
+   </property>
+   <property name="text">
+    <string>Skip existing records</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="Start">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Start page</string>
+   </property>
+   <property name="statusTip">
+    <string>Start page</string>
+   </property>
+   <property name="whatsThis">
+    <string>Start page</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>Start page : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>9999</number>
+   </property>
+   <property name="value">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="Finish">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>140</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>End page</string>
+   </property>
+   <property name="statusTip">
+    <string>End page</string>
+   </property>
+   <property name="whatsThis">
+    <string>End page</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>End page : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>9999</number>
+   </property>
+   <property name="value">
+    <number>1620</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Posting">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Posting identifier</string>
+   </property>
+   <property name="statusTip">
+    <string>Posting identifier</string>
+   </property>
+   <property name="whatsThis">
+    <string>Posting identifier</string>
+   </property>
+   <property name="placeholderText">
+    <string>Posting identifier</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Thumbnails">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>220</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Entry thumbnails</string>
+   </property>
+   <property name="statusTip">
+    <string>Entry thumbnails</string>
+   </property>
+   <property name="whatsThis">
+    <string>Entry thumbnails</string>
+   </property>
+   <property name="placeholderText">
+    <string>Entry thumbnails</string>
+   </property>
+  </widget>
+  <widget class="QTreeWidget" name="JfNames">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>20</y>
+     <width>300</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="rootIsDecorated">
+    <bool>false</bool>
+   </property>
+   <property name="columnCount">
+    <number>2</number>
+   </property>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string notr="true">2</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QCheckBox" name="Cache">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>20</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Use cache</string>
+   </property>
+   <property name="statusTip">
+    <string>Use cache</string>
+   </property>
+   <property name="whatsThis">
+    <string>Use cache</string>
+   </property>
+   <property name="text">
+    <string>Use cache</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="GZip">
+   <property name="geometry">
+    <rect>
+     <x>44</x>
+     <y>100</y>
+     <width>416</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>GZip location</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="BrowseGZip">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/folder.png</normaloff>:/images/folder.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="DownloadOnly">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Download only</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Proxy">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Use web proxy</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Skip</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>JavFreeVideo</receiver>
+   <slot>JavFreeValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Start</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>JavFreeVideo</receiver>
+   <slot>JavFreeValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Finish</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>JavFreeVideo</receiver>
+   <slot>JavFreeValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Posting</sender>
+   <signal>editingFinished()</signal>
+   <receiver>JavFreeVideo</receiver>
+   <slot>JavFreeChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Thumbnails</sender>
+   <signal>editingFinished()</signal>
+   <receiver>JavFreeVideo</receiver>
+   <slot>JavFreeChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JfNames</sender>
+   <signal>itemDoubleClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>JavFreeVideo</receiver>
+   <slot>NameClicked(QTreeWidgetItem*,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>179</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cache</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>JavFreeVideo</receiver>
+   <slot>JavFreeValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>GZip</sender>
+   <signal>editingFinished()</signal>
+   <receiver>JavFreeVideo</receiver>
+   <slot>JavFreeChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BrowseGZip</sender>
+   <signal>clicked()</signal>
+   <receiver>JavFreeVideo</receiver>
+   <slot>JavFreeBrowse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DownloadOnly</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>JavFreeVideo</receiver>
+   <slot>JavFreeValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

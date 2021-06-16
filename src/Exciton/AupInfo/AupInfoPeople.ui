@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AupInfoPeople</class>
+ <widget class="QWidget" name="AupInfoPeople">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>a-up.info : People</string>
+  </property>
+  <widget class="QLineEdit" name="AupInfoPattern">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>a-up.info pornstar pattern</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="AupInfoStart">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>Start : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>99999</number>
+   </property>
+   <property name="value">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="AupInfoNames">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Verify english name by image file name</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="AupInfoFinish">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>End : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>99999</number>
+   </property>
+   <property name="value">
+    <number>9900</number>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="AupInfoSkip">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Skip existing records</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="AupInfoActress">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>a-up.info actress identifier</string>
+   </property>
+  </widget>
+  <widget class="QTreeWidget" name="AupNames">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>20</y>
+     <width>300</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="rootIsDecorated">
+    <bool>false</bool>
+   </property>
+   <property name="columnCount">
+    <number>2</number>
+   </property>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string notr="true">2</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>AupInfoPattern</sender>
+   <signal>editingFinished()</signal>
+   <receiver>AupInfoPeople</receiver>
+   <slot>AupChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupInfoActress</sender>
+   <signal>editingFinished()</signal>
+   <receiver>AupInfoPeople</receiver>
+   <slot>AupChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupInfoSkip</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>AupInfoPeople</receiver>
+   <slot>AupValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupInfoStart</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>AupInfoPeople</receiver>
+   <slot>AupValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupInfoFinish</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>AupInfoPeople</receiver>
+   <slot>AupValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupNames</sender>
+   <signal>itemDoubleClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>AupInfoPeople</receiver>
+   <slot>NameClicked(QTreeWidgetItem*,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupInfoNames</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>AupInfoPeople</receiver>
+   <slot>AupValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

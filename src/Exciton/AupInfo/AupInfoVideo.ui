@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AupInfoVideo</class>
+ <widget class="QWidget" name="AupInfoVideo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QSpinBox" name="AupInfoDvdStart">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>Start : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>9999999</number>
+   </property>
+   <property name="value">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="AupInfoDvdFinish">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>End : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>2000000</number>
+   </property>
+   <property name="value">
+    <number>172000</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="AupInfoDvdPattern">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>a-up.info DVD pattern</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="AupInfoSkip">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Skip existing records</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTreeWidget" name="AupNames">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>20</y>
+     <width>300</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="rootIsDecorated">
+    <bool>false</bool>
+   </property>
+   <property name="columnCount">
+    <number>2</number>
+   </property>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string notr="true">2</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QCheckBox" name="AupInfoCache">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>20</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Use cache</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>AupInfoSkip</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>AupInfoVideo</receiver>
+   <slot>AupValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupInfoDvdStart</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>AupInfoVideo</receiver>
+   <slot>AupValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupInfoDvdFinish</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>AupInfoVideo</receiver>
+   <slot>AupValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupInfoDvdPattern</sender>
+   <signal>editingFinished()</signal>
+   <receiver>AupInfoVideo</receiver>
+   <slot>AupChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupNames</sender>
+   <signal>itemDoubleClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>AupInfoVideo</receiver>
+   <slot>NameClicked(QTreeWidgetItem*,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AupInfoCache</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>AupInfoVideo</receiver>
+   <slot>AupValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

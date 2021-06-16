@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>JavTorrentVideo</class>
+ <widget class="QWidget" name="JavTorrentVideo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>JAV Torrent</string>
+  </property>
+  <property name="toolTip">
+   <string>JAV Torrent</string>
+  </property>
+  <property name="statusTip">
+   <string>JAV Torrent</string>
+  </property>
+  <property name="whatsThis">
+   <string>JAV Torrent</string>
+  </property>
+  <widget class="QCheckBox" name="Skip">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Skip existing records</string>
+   </property>
+   <property name="statusTip">
+    <string>Skip existing records</string>
+   </property>
+   <property name="whatsThis">
+    <string>Skip existing records</string>
+   </property>
+   <property name="text">
+    <string>Skip existing records</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Cache">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>20</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Use cache</string>
+   </property>
+   <property name="statusTip">
+    <string>Use cache</string>
+   </property>
+   <property name="whatsThis">
+    <string>Use cache</string>
+   </property>
+   <property name="text">
+    <string>Use cache</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="Lastest">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>JAV Torrent ID</string>
+   </property>
+   <property name="statusTip">
+    <string>JAV Torrent ID</string>
+   </property>
+   <property name="whatsThis">
+    <string>JAV Torrent ID</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>ID : </string>
+   </property>
+   <property name="maximum">
+    <number>999999999</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Pattern">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>220</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>JAV Torrent Http pattern</string>
+   </property>
+   <property name="statusTip">
+    <string>JAV Torrent Http pattern</string>
+   </property>
+   <property name="whatsThis">
+    <string>JAV Torrent Http pattern</string>
+   </property>
+   <property name="placeholderText">
+    <string>JAV Torrent Http pattern</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="Retry">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>180</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Retry FreeDL ID</string>
+   </property>
+   <property name="statusTip">
+    <string>Retry FreeDL ID</string>
+   </property>
+   <property name="whatsThis">
+    <string>Retry FreeDL ID</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="suffix">
+    <string> times</string>
+   </property>
+   <property name="prefix">
+    <string>Retry </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
+   <property name="value">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Torrent">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Download torrent</string>
+   </property>
+   <property name="statusTip">
+    <string>Download torrent</string>
+   </property>
+   <property name="whatsThis">
+    <string>Download torrent</string>
+   </property>
+   <property name="text">
+    <string>Download torrent</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTreeWidget" name="Names">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>20</y>
+     <width>300</width>
+     <height>240</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Name collections</string>
+   </property>
+   <property name="statusTip">
+    <string>Name collections</string>
+   </property>
+   <property name="whatsThis">
+    <string>Name collections</string>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="rootIsDecorated">
+    <bool>false</bool>
+   </property>
+   <property name="columnCount">
+    <number>2</number>
+   </property>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string notr="true">2</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QCheckBox" name="Image">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Download image</string>
+   </property>
+   <property name="statusTip">
+    <string>Download image</string>
+   </property>
+   <property name="whatsThis">
+    <string>Download image</string>
+   </property>
+   <property name="text">
+    <string>Download image</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="JpTorrent">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>260</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>JP Torrent Http pattern</string>
+   </property>
+   <property name="statusTip">
+    <string>JP Torrent Http pattern</string>
+   </property>
+   <property name="whatsThis">
+    <string>JP Torrent Http pattern</string>
+   </property>
+   <property name="placeholderText">
+    <string>JP Torrent Http pattern</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="DownloadOnly">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Download only</string>
+   </property>
+   <property name="statusTip">
+    <string>Download only</string>
+   </property>
+   <property name="whatsThis">
+    <string>Download only</string>
+   </property>
+   <property name="text">
+    <string>Download only</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="DontParse">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>100</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Don't parse</string>
+   </property>
+   <property name="statusTip">
+    <string>Don't parse</string>
+   </property>
+   <property name="whatsThis">
+    <string>Don't parse</string>
+   </property>
+   <property name="text">
+    <string>Don't parse</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Identifier">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>300</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>JAV Torrent Identifier</string>
+   </property>
+   <property name="statusTip">
+    <string>JAV Torrent Identifier</string>
+   </property>
+   <property name="whatsThis">
+    <string>JAV Torrent Identifier</string>
+   </property>
+   <property name="placeholderText">
+    <string>JAV Torrent Identifier</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="TorrentPath">
+   <property name="geometry">
+    <rect>
+     <x>44</x>
+     <y>140</y>
+     <width>416</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Torrent file path</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="BrowseTorrent">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../../Applications/Images/CIOS.qrc">
+     <normaloff>:/images/folder.png</normaloff>:/images/folder.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../../../Applications/Images/CIOS.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Skip</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cache</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DownloadOnly</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DontParse</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Image</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Torrent</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Lastest</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Retry</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentValues(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Pattern</sender>
+   <signal>editingFinished()</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JpTorrent</sender>
+   <signal>editingFinished()</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Names</sender>
+   <signal>itemDoubleClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>NameClicked(QTreeWidgetItem*,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Identifier</sender>
+   <signal>editingFinished()</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BrowseTorrent</sender>
+   <signal>clicked()</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>BrowseTorrent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>TorrentPath</sender>
+   <signal>editingFinished()</signal>
+   <receiver>JavTorrentVideo</receiver>
+   <slot>JavTorrentChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

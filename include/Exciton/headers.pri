@@ -1,0 +1,5 @@
+SYNCQT.HEADER_FILES = ../../include/Exciton/exciton.h
+SYNCQT.HEADER_CLASSES = ../../include/Exciton/Exciton
+SYNCQT.PRIVATE_HEADER_FILES =
+SYNCQT.QPA_HEADER_FILES = 
+SYNCQT.INJECTIONS = 

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>XcityPeople</class>
+ <widget class="QWidget" name="XcityPeople">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>X City - People</string>
+  </property>
+  <property name="toolTip">
+   <string>X City - People</string>
+  </property>
+  <property name="statusTip">
+   <string>X City - People</string>
+  </property>
+  <property name="whatsThis">
+   <string>X City - People</string>
+  </property>
+  <widget class="QLineEdit" name="XcityJpId">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>260</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Pornstar ID pattern</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="XcityJpSearch">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>xcity.jp search pattern</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="XcityJpFound">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Found pornstar picture marking text</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="XcityJpStart">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>Start : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>99999</number>
+   </property>
+   <property name="value">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="XcityJpFinish">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>End : </string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>99999</number>
+   </property>
+   <property name="value">
+    <number>7000</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="XcityJpIdFound">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>220</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Pornstar ID identifier</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="XcityJpSkip">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Skip existing records</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="XcityJpMissing">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>440</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Missing text mark</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>XcityJpSkip</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>XcityPeople</receiver>
+   <slot>XcityValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XcityJpStart</sender>
+   <signal>editingFinished()</signal>
+   <receiver>XcityPeople</receiver>
+   <slot>XcityJpChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XcityJpFinish</sender>
+   <signal>editingFinished()</signal>
+   <receiver>XcityPeople</receiver>
+   <slot>XcityJpChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XcityJpSearch</sender>
+   <signal>editingFinished()</signal>
+   <receiver>XcityPeople</receiver>
+   <slot>XcityJpChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XcityJpMissing</sender>
+   <signal>editingFinished()</signal>
+   <receiver>XcityPeople</receiver>
+   <slot>XcityJpChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XcityJpIdFound</sender>
+   <signal>editingFinished()</signal>
+   <receiver>XcityPeople</receiver>
+   <slot>XcityJpChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XcityJpFound</sender>
+   <signal>editingFinished()</signal>
+   <receiver>XcityPeople</receiver>
+   <slot>XcityJpChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XcityJpId</sender>
+   <signal>editingFinished()</signal>
+   <receiver>XcityPeople</receiver>
+   <slot>XcityJpChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
